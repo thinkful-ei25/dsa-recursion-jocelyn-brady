@@ -1,6 +1,6 @@
 // input: 5
 // output: 120
-
+'use strict';
 function fact(num) {
   if(num === 1) return 1;
 
