@@ -1,24 +1,23 @@
 'use strict'; 
-//input = east 
-//output 24 items in array
-//e + ast, ats, sat, sta, tsa 
-
-//we need 
 
 
+function anagrams(prefix, str){
 
-//a 
-//s
-//t 
-
-
-function anagrams(str){
-
-
-  // let postStr = str.slice(1); 
-  // for(let i = 0; i<postStr.length ; i++){
-  //   let store = []; 
-  //   store.push(i); 
-  // }
-  
+  if(str === '') {
+    return [prefix];
+  }
+  let words = [];
+  for(let i = 0; i < str.length; i++) {
+    words = words.concat(anagrams(prefix + str[i], str.slice(0, i) + str.slice(i+1)));
+  }
+return words;  
 }
+
+const obj = {
+  prefix: '',
+  str: 'east'
+}
+
+console.log(anagrams(obj.prefix, obj.str));
+  
+  
