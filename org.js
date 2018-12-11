@@ -30,12 +30,12 @@ function traversal(node, depth = 1) {
   }
 }
 
-function traverse(obj, depth = 1) {
-  let ident = ' '.repeat(depth*2);
-  Object.keys(obj).forEach(item => {
-    console.log(ident + item);
-    traverse(obj[item], depth++);
-  })
-}
+// function traverse(obj, depth = 1) {
+//   let ident = ' '.repeat(depth*2);
+//   Object.keys(obj).forEach(item => {
+//     console.log(ident + item);
+//     traverse(obj[item], depth++);
+//   })
+// }
 
 traversal(orgChart(org, null));
